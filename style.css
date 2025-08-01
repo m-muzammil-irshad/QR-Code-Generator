@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary: #47185c;
+  --primary_dark: #14001d;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary);
+}
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.box {
+  width: 400px;
+  background-color: white;
+  padding: 2rem;
+}
+.box h1 {
+  font-weight: 400;
+  text-align: center;
+  line-height: 36px;
+}
+.box p {
+  font-size: 1.4rem;
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+input {
+  height: 4rem;
+  width: 100%;
+  border: 0.15rem solid #767676;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  font-size: 1.7rem;
+}
+input:focus {
+  outline: 0.1rem solid var(--primary);
+  border: 0.1rem solid var(--primary);
+}
+button {
+  height: 4rem;
+  width: 100%;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  font-size: 1.8rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  opacity: 0.9;
+}
+button:hover {
+  opacity: 1;
+}
+
+button:active {
+  background-color: var(--primary_dark);
+}
+
+.qr_container {
+  border: 0.1rem solid var(--primary);
+  border-top: none;
+  display: grid;
+  place-items: center;
+  height: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in , hieght 0.1s ease;
+}
+.qr_container.show {
+  height: 17rem;
+  opacity: 1;
+  transition: opacity 0.3s ease-in , hieght 0.1s ease;
+}
+.qr_container img {
+  padding: 1rem 0;
+  height: 15rem;
+}
+@media (max-width:425px){
+    html{
+        font-size: 50%;
+    }
+    .box{
+width: 70%;
+    }
+    
+}
+@media (max-width:375px){
+    h1{
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+}
